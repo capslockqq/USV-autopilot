@@ -7,6 +7,6 @@ int main()
 	int x;
 	cin >> x;
 	cout << x << endl;
-	cout << "sumande" << endl;
+	cout << "sumasdsdnde" << endl;
     return 0;
 }
