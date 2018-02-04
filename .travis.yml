@@ -1,0 +1,19 @@
+sudo: required 
+# Enable C++ support
+language: cpp
+
+# Compiler selection
+compiler:
+  - gcc
+  
+# Build steps
+script:
+  - sudo apt-get install libxorg-gtest-dev
+  - cd USV-autopilot/USV-autopilot/
+  - make
+  - cd ../UnitTest1
+  - make
+  
+  
+notifications:
+  email: false
