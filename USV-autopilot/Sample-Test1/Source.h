@@ -9,7 +9,6 @@ public:
 	static string greet(const string& name);
 };
 
-///////////////////////////////////////
-// In the class implementation file
+
 
 
