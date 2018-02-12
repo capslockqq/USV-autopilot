@@ -29,7 +29,7 @@ script:
   - make clean
   - make
   - ls
-  - ./Source
+  - ./Source.out
   
   
 notifications:
