@@ -13,8 +13,17 @@ TEST(SalutationTest, Static) {
 	EXPECT_EQ(string("Hello World!"), Salutation::greet("World"));
 }
 
-int main()
+int main(int argc, char* argv[])
 {
-	RUN_ALL_TESTS();
+	::testing::InitGoogleTest(&argc, argv);
+	if (RUN_ALL_TESTS() == 0)
+	{
+		cout << "SUCCESS" << endl;
+	}
+	else
+	{;
+		cout << "FAIL" << endl;
+	}
+
 	return 0;
 }
