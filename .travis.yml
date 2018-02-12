@@ -13,7 +13,7 @@ script:
   - cd USV-autopilot/USV-autopilot/
   - make clean
   - make
-  - cd ../UnitTest1
+  - cd ../Sample-Test1
   - make clean
   - make
   

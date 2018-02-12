@@ -68,6 +68,7 @@
     <ClInclude Include="hello.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Makefile" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

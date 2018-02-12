@@ -5,15 +5,15 @@
 # this is done with the flags  -ftest-coverage -fprofile-arcs 
 # see run_coverage_test.sh to see how to call code coverage tests        
 CC=g++
-CFLAGS = -Wall
-DEPS   = hello.h
-OBJ    = main.o hello.o
+CFLAGS = -I. -Wall -ftest-coverage -fprofile-arcs 
+DEPS   = pcb.h
+OBJ    = test.o
                   
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS) 
 
 test-library.out: $(OBJ)
-	g++ -o $@ $^ $(CFLAGS) -lm -Os 
+	gcc -o $@ $^ $(CFLAGS) -lm -lncurses -Os 
 
 clean :
-	rm  *.o
+	rm  *.o  *.asm  *.lst *.sym *.rel *.s *.gc* -f *.info
