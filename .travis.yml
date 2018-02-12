@@ -10,6 +10,11 @@ compiler:
 script:
   - sudo apt-get install libxorg-gtest-dev
   - sudo apt-get install libcppunit-dev
+  - sudo apt install libgtest-dev cmake
+  - cd /usr/src/gtest
+  - sudo cmake CMakeLists.txt
+  - sudo make
+  - sudo cp *.a /usr/lib
   - cd USV-autopilot/USV-autopilot/
   - make clean
   - make
