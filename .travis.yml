@@ -13,8 +13,9 @@ script:
   - cd USV-autopilot/USV-autopilot/
   - make clean
   - make
- # - cd ../UnitTest1
- # - make
+  - cd ../UnitTest1
+  - make clean
+  - make
   
   
 notifications:
