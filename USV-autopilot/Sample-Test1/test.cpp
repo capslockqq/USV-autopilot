@@ -16,14 +16,6 @@ TEST(SalutationTest, Static) {
 int main(int argc, char* argv[])
 {
 	::testing::InitGoogleTest(&argc, argv);
-	if (RUN_ALL_TESTS() == 0)
-	{
-		cout << "SUCCESS" << endl;
-	}
-	else
-	{;
-		cout << "FAIL" << endl;
-	}
 
-	return 0;
+	return RUN_ALL_TESTS();
 }
