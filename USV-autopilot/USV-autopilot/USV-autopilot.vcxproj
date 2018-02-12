@@ -67,6 +67,9 @@
   <ItemGroup>
     <ClInclude Include="hello.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <CppLanguageStandard>c++11</CppLanguageStandard>

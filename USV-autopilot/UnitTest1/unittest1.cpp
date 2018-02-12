@@ -19,7 +19,7 @@ namespace UnitTest1
 		TEST_METHOD(TestMethod2)
 		{
 			hello luls = hello();
-			Assert::AreEqual(luls.addTwoNumber(2, 2), 5);
+			Assert::AreEqual(luls.addTwoNumber(2, 2), 4);
 		}
 
 	};

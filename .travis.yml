@@ -9,6 +9,7 @@ compiler:
 # Build steps
 script:
   - sudo apt-get install libxorg-gtest-dev
+  - sudo apt-get install libcppunit-dev
   - cd USV-autopilot/USV-autopilot/
   - make
   - cd ../UnitTest1

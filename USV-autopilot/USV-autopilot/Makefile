@@ -1,2 +1,6 @@
-hello_exec: main.cpp
-	g++ main.cpp -o hello_exec
+CC=g++
+CFLAGS=-Wall
+main: main.o hello.o
+
+clean:
+	rm -f main main.o hello.o
