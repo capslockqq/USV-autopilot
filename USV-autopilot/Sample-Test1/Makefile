@@ -1,13 +1,22 @@
-CC=gcc
-CFLAGS = -I. -Wall -ftest-coverage -fprofile-arcs 
-DEPS   = Source.h
-OBJ    = Source.o test.o
-                  
-%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS) 
+GOOGLE_TEST_LIB = gtest
+GOOGLE_TEST_INCLUDE = /usr/local/include
 
-test-library.out: $(OBJ)
-	gcc -o $@ $^ $(CFLAGS) -lm -lncurses -Os 
+G++ = g++
+G++_FLAGS = -c -Wall -I $(GOOGLE_TEST_INCLUDE)
+LD_FLAGS = -L /usr/local/lib -l $(GOOGLE_TEST_LIB) -l pthread
 
-clean :
-	rm  *.o  *.asm  *.lst *.sym *.rel *.s *.gc* -f *.info
+OBJECTS = test.o Source.o
+TARGET = Source
+
+all: $(TARGET)
+
+$(TARGET): $(OBJECTS)
+	g++ -o $(TARGET) $(OBJECTS) $(LD_FLAGS)
+
+%.o : %.cpp
+	$(G++) $(G++_FLAGS) $<
+
+clean:
+	rm -f $(TARGET) $(OBJECTS)
+                    
+.PHONY: all clean
