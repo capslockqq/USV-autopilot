@@ -1,22 +1,13 @@
-NAME = Source
+CC=gcc
+CFLAGS = -I. -Wall -ftest-coverage -fprofile-arcs 
+DEPS   = Source.h
+OBJ    = Source.o test.o
+                  
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS) 
 
-LIBS = -lgtest_main
+test-library.out: $(OBJ)
+	gcc -o $@ $^ $(CFLAGS) -lm -lncurses -Os 
 
-debug: all
-run-debug:
-	./${NAME}
-
-all: $(NAME).o
-	c++ -lstdc++ $(LIBS) -o $(NAME) $(NAME).o
-
-compile: $(NAME).o
-
-clean:
-	find . -name '*.o' -exec rm -f {} ';'
-	find . -name $(NAME) -exec rm -f {} ';'
-
-$(NAME).o: $(NAME).c++
-	gcc -c -I. -o $(NAME).o $(NAME).c++
-
-.c++.o:
-	gcc -c -I. -o $@ $<
+clean :
+	rm  *.o  *.asm  *.lst *.sym *.rel *.s *.gc* -f *.info
