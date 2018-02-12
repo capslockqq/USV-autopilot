@@ -4,7 +4,7 @@ LIBS = -lgtest_main
 
 debug: all
 run-debug:
-  ./${NAME}
+	./${NAME}
 
 all: $(NAME).o
 	c++ -lstdc++ $(LIBS) -o $(NAME) $(NAME).o
