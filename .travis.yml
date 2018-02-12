@@ -15,9 +15,7 @@ script:
   - sudo cmake CMakeLists.txt
   - sudo make
   - sudo cp *.a /usr/lib
-  - cd ..
-  - cd ..
-  - cd ..
+  - cd ~
   - cd USV-autopilot/USV-autopilot/
   - make clean
   - make
