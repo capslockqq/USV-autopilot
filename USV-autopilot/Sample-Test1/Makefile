@@ -4,7 +4,7 @@
 # test coverage is achieved usding gcov (part of gcc suite)
 # this is done with the flags  -ftest-coverage -fprofile-arcs 
 # see run_coverage_test.sh to see how to call code coverage tests        
-CC=g++
+CC=gcc
 CFLAGS = -I. -Wall -ftest-coverage -fprofile-arcs 
 DEPS   = pcb.h
 OBJ    = test.o
