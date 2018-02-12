@@ -1,2 +1,6 @@
-uTest: unittest1.cpp
-	g++ unittest1.cpp -o uTest
+CC=g++
+CFLAGS=-Wall
+uTest: unittest1.o
+
+clean:
+	rm *.o
