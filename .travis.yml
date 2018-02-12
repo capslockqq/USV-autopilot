@@ -28,7 +28,8 @@ script:
   - cd ../Sample-Test1
   - make clean
   - make
-  - ./Source.out
+  - ls
+  - ./Source
   
   
 notifications:
