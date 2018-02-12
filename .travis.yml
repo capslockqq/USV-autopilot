@@ -19,6 +19,7 @@ script:
   - sudo cp *.a /usr/lib
   - pwd
   - cd ~
+  - cd build/capslockqq/USV-autopilot
   - pwd
   - ls
   - cd USV-autopilot/USV-autopilot/
