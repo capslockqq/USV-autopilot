@@ -16,6 +16,7 @@ script:
   - sudo make
   - sudo cp *.a /usr/lib
   - cd ~
+  - ls
   - cd USV-autopilot/USV-autopilot/
   - make clean
   - make
