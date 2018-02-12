@@ -11,9 +11,10 @@ script:
   - sudo apt-get install libxorg-gtest-dev
   - sudo apt-get install libcppunit-dev
   - cd USV-autopilot/USV-autopilot/
+  - make clean
   - make
-  - cd ../UnitTest1
-  - make
+ # - cd ../UnitTest1
+ # - make
   
   
 notifications:
