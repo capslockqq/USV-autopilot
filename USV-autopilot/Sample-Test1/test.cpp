@@ -10,7 +10,7 @@ TEST(TestCaseName, TestName) {
 
 
 TEST(SalutationTest, Static) {
-	EXPECT_EQ(string("Hello World!"), Salutation::greet("World"));
+	EXPECT_EQ(string("Hello World!"), Salutation::greet("Worldd"));
 }
 
 int main(int argc, char* argv[])
